@@ -15,30 +15,34 @@ const selectScore = document.querySelector("#selectScore")
 
 let winningScore = 5;
 let gameOver = false;
-const diff = (a, b) => {
+let diff = (a, b) => {
     return Math.abs(a - b);
 }
 
 function updateScore(player, opponent){
     if(!gameOver){
-        player.score += 1;
+       player.score += 1; 
+    
     }
-    if(player.score === winningScore && diff(player.score,opponent.score) < 2){
-        gameOver = true;
-        player.display.classList.add("has-text-success")
-        opponent.display.classList.add("has-text-danger")
-        player.button.disabled = true;
-        opponent.button.disabled = true;
+    const moreThanWinScoreAndScoreDiff = diff(p1.score,p2.score) >= 2 && player.score >= winningScore;
+    
+    if(moreThanWinScoreAndScoreDiff){
 
+            gameOver = true;
+            player.display.classList.add("has-text-success")
+            opponent.display.classList.add("has-text-danger")
+            player.button.disabled = true;
+            opponent.button.disabled = true;
     }
     
+   
     player.display.textContent = player.score;
 }
 
 
 
 p1.button.addEventListener('click' , function(){
-    updateScore(p1,p2)
+        updateScore(p1,p2);
 })
 
 p2.button.addEventListener('click' , function(){
@@ -46,6 +50,7 @@ p2.button.addEventListener('click' , function(){
 })
 
 selectScore.addEventListener('change' , function(){
+   
     winningScore = parseInt(this.value)
     reset()
 })
@@ -63,3 +68,5 @@ function reset(){
     
     
 }
+
+
