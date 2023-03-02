@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Axios</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="dadJokes.jpeg" alt="" />
+                </figure>
+              </div>
+              <header class="card-header">
+                <h1 class="card-header-title">Dad Jokes Generator</h1>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <p class="subtitle">
+                    Use the button below to generate a Dad joke
+                  </p>
+                  <ul id="jokes"></ul>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <button
+                  id="add"
+                  class="is-primary button card-footer-item is-large"
+                >
+                  Click Me
+                </button>
+                <button
+                  id="delete"
+                  class="is-danger button card-footer-item is-large"
+                >
+                  Remove Jokes
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
