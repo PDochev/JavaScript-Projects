@@ -2,7 +2,7 @@ const jokes = document.querySelector("#jokes");
 const buttonAdd = document.querySelector("#add");
 const buttonDelete = document.querySelector("#delete");
 
-buttonDelete.disabled = true; 
+buttonDelete.disabled = true;   
 
 const addNewJoke = async () => {
   const jokeText = await getDadJoke();
