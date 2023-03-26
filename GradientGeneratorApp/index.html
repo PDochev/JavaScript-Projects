@@ -19,40 +19,49 @@
   <body>
     <div class="container">
       <div class="colors">
-        <input type="color" id="color-a" value="#457b9d" />
-        <input type="color" id="color-b" value="#f1faee" />
+        <input type="color" id="color-a" value="#22577a" />
+        <input type="color" id="color-b" value="#c7f9cc" />
       </div>
       <div class="buttons">
-        <button onclick="setDirection('to top' , this)">
+        <button onclick="setDirection('to top', this)">
           <i class="fas fa-arrow-up"></i>
         </button>
-        <button class="active" onclick="setDirection('to bottom',this)">
+        <button class="active" onclick="setDirection('to bottom', this)">
           <i class="fas fa-arrow-down"></i>
         </button>
-        <button onclick="setDirection('to right')">
+        <button onclick="setDirection('to right', this)">
           <i class="fas fa-arrow-right"></i>
         </button>
-        <button onclick="setDirection('to left')">
+        <button onclick="setDirection('to left', this)">
           <i class="fas fa-arrow-left"></i>
         </button>
-        <button class="rotate-icon" onclick="setDirection('to top right')">
+        <button
+          class="rotate-icon"
+          onclick="setDirection('to top right', this)"
+        >
           <i class="fas fa-arrow-up"></i>
         </button>
-        <button class="rotate-icon" onclick="setDirection('to bottom left')">
+        <button
+          class="rotate-icon"
+          onclick="setDirection('to bottom left', this)"
+        >
           <i class="fas fa-arrow-down"></i>
         </button>
-        <button class="rotate-icon" onclick="setDirection('to bottom right')">
+        <button
+          class="rotate-icon"
+          onclick="setDirection('to bottom right', this)"
+        >
           <i class="fas fa-arrow-right"></i>
         </button>
-        <button class="rotate-icon" onclick="setDirection('to top left')">
+        <button class="rotate-icon" onclick="setDirection('to top left', this)">
           <i class="fas fa-arrow-left"></i>
         </button>
       </div>
-       <button id="submit" onclick="generateCode()">Generate</button>
-       <div class="output">
-        <textarea  id="code"  rows="2"></textarea>
+      <button id="submit" onclick="generateCode()">Generate</button>
+      <div class="output">
+        <textarea id="code" rows="2"></textarea>
         <button id="copy" onclick="copyText()">Copy</button>
-       </div>
+      </div>
     </div>
 
     <script src="app.js"></script>

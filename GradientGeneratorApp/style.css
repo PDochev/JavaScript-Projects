@@ -25,7 +25,7 @@ body {
 }
 
 .container *:not(i) {
-  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .colors {
@@ -61,5 +61,50 @@ input[type="color"]::-webkit-color-swatch {
   background-color: transparent;
   border: 2px solid #d5d5dc;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.rotate-icon i {
+  transform: rotate(45deg);
+}
+
+.buttons .active {
+  border: none;
+  background-color: #4a6ee0;
+  color: #fff;
+}
+
+#submit {
+  display: block;
+  background-color: #4a6ee0;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 70px;
+  border-radius: 25px;
+  margin: 0 auto 30px auto;
+  cursor: pointer;
+}
+
+.output {
+  background-color: #f0f2fc;
+}
+
+#code {
+  width: 100%;
+  resize: none;
+  color: #30304a;
+  padding: 10px 20px;
+  background-color: transparent;
+}
+
+#copy {
+  font-size: 14px;
+  background-color: #4a6ee0;
+  color: #fff;
+  position: relative;
+  left: 85%;
+  bottom: 10px;
+  border-radius: 3px;
+  padding: 5px;
   cursor: pointer;
 }
